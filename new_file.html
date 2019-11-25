@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.banner-list img{
+			height: 460px;
+			}
+			.banner-item{
+			display: none;
+			}
+			.ac{
+	display: block;
+}
+.banner{
+	position: relative;
+	margin-bottom: 14px;
+}
+		</style>
+	</head>
+	<body>
+		<div class="banner-list">
+			<div class="banner-item ac"><img  src="image/banner/banner01.jpg"/></div>
+			<div class="banner-item"><img  src="image/banner/banner02.jpg"/></div>
+			<div class="banner-item"><img  src="image/banner/banner03.jpg"/></div>
+			<div class="banner-item"><img  src="image/banner/banner04.jpg"/></div>
+			<div class="banner-item"><img  src="image/banner/banner05.jpg"/></div>
+		
+		</div>		
+	</body>
+	<script src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		var bannerList=$('.banner-item')
+		var num=0;
+		var timer=setInterval(function(){
+			num++;
+			num%=5;
+			bannerList.eq(num).addClass('ac').siblings().removeClass('ac')
+		},500)
+	</script>
+</html>
